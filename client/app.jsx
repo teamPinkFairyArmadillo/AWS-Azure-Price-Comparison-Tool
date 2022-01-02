@@ -1,13 +1,14 @@
 import React from 'react';
 
 
-function App(){
+function App() {
+
   return (
-    
+
     <div>
-        <h1>Price Comparison Tool</h1>
+      <h1>Price Comparison Tool</h1>
     </div>
-    )
+  )
 }
 
 
