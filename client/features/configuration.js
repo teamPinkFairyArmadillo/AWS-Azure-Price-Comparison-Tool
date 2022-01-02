@@ -12,14 +12,14 @@ const initialStateValue = {
 //REDUCERS
 export const configurationSlice = createSlice({
   name: 'configuration',
-  initialState: initialStateValue,
+  initialState: { value: initialStateValue },
   reducers: {
     calc: (state, action) => {
-      state.value = action.payload
+      state.value = action.payload;
     },
     reset: (state, action) => {
       state.value = initialStateValue
-    }
+    },
   }
 });
 
