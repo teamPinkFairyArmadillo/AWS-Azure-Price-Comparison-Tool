@@ -1,4 +1,4 @@
-//This index.json is in the server folder. Because it is only us-east-1 it is 184 MB.
+//This is only us-east-1, so it is 184 MB.
 const urlForAwsUsEast = 'https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json';
 const awsPrices = {};/* An object of every instanceType and pricePerUnit of the fetch request where vCPU and memory is greater or equal to the vCPU and RAM that the user inputted and operating system equals the operating system the user inputted. */
 const lowestAwsPrice = () => {
