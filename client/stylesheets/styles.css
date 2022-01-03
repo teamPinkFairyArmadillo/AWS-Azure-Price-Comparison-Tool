@@ -1,0 +1,35 @@
+.azureBox{
+    background-color: rgb(212, 246, 255);
+    width: 350px;
+    height: 150px;
+    border: darkslategray;
+    border-style: outset;
+    border-width: 4px;
+    margin-left: 15px;
+    padding-bottom: 40px;
+  }
+  .jsonitems{
+    display: inline-block;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(58, 58, 58);
+    border: rgb(61, 61, 61);
+    margin-left: 5px;
+    padding-bottom: 10px;
+  
+  }
+  
+  .logo{
+    height: 30%;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .displayTab{
+    margin-left: 30px;
+    height: 100%;
+    border: black;
+    border-width: 5px;
+  }
+  .listGoods{
+    display: grid;
+  }

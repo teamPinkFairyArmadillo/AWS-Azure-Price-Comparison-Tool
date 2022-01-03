@@ -5,6 +5,7 @@ import App from './app.jsx';
 // import store from './store.js'
 import './stylesheets/styles.css';
 import { render } from 'react-dom';
+// import AzurePriceComp from './components/AzureAPIcall.jsx';
 
 
 
