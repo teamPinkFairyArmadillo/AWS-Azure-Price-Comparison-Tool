@@ -6,6 +6,7 @@ const azureSizes = [];/* Do a fetch to the Azure REST API here to return an arra
 //         this.unitPrice = unitPrice;
 //     }
 // };
+//added comment 
 
 const lowestAzurePrice = () => {
     const minPrice = {
