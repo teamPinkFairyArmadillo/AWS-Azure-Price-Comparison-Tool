@@ -44,15 +44,38 @@ module.exports = {
               
             },
             {
+<<<<<<< HEAD
+              test: /\.(gif|png|jpe?g|svg)$/i,
+              use: [
+                'file-loader',
+                {
+                  loader: 'image-webpack-loader',
+                  options: {
+                    bypassOnDebug: true, // webpack@1.x
+                    disable: true, // webpack@2.x and newer
+                  },
+                },
+              ],
+          },
+            {
+              test: /.(css|scss)$/,
+              exclude: /node_modules/,
+              use: ['style-loader', 'css-loader'],
+=======
               test: /.(css|scss)$/,
               exclude: /node_modules/,
               use: ['style-loader', 'css-loader', 'postcss-loader'],
+>>>>>>> 87c8121603846ce5d454a39f300a902254a0562a
             }
           ],
         },
         plugins: [
           new HtmlWebpackPlugin({
             template: './client/index.html',
+<<<<<<< HEAD
+            filename: './index.html',
+=======
+>>>>>>> 87c8121603846ce5d454a39f300a902254a0562a
           }),
           
         ],
