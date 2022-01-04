@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const azureSizes = [];/* Do a fetch to the Azure REST API here to return an array of size values (ex. D5) where the vCPUs and the MemoryGB is greater or equal to what the user inputted. These are the values used to query the prices.azure.com API.*/
+=======
 const azureSizes = [];/* Do a fetch to the Azure REST API here to return an array of sizes values (ex. D5) where the vCPUs and the MemoryGB is greater or equal to what the user inputted. These are the values used to query the prices.azure.com API.*/
 
 // class AzurePrices {
@@ -7,6 +10,7 @@ const azureSizes = [];/* Do a fetch to the Azure REST API here to return an arra
 //     }
 // };
 //added comment 
+>>>>>>> 913559d862d147b61bfe4270a14e0ffad242f461
 
 const lowestAzurePrice = () => {
     const minPrice = {
