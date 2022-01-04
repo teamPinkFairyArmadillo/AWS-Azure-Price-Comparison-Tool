@@ -6,7 +6,7 @@ const initialStateValue = {
   OS: '',
   instance_series: '',
   num_VM: 1,
-
+  
 }
 
 //REDUCERS
