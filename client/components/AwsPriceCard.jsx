@@ -10,7 +10,6 @@ import awsLogo from './Amazon-Web-Services-AWS-Logo.png'
 
 
 function AwsPriceCard(props){
-    console.log("We render the AWS prc com");
     const awsCall = `https://prices.azure.com/api/retail/prices?$filter=location eq 'US East 2' and skuName eq 'D2' and serviceName eq 'Virtual Machines'`;
     const [awsInfo, setPrice] = useState({serviceName: '', retailPrice: '', location: ''});
     // async function awsJSON(){
