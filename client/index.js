@@ -1,29 +1,12 @@
 
 import React from 'react';
 import App from './app.jsx';
-<<<<<<< HEAD
-import { render } from 'react-dom';
-// import { Provider } from 'react-redux'
-// import store from './store.js'
-import './stylesheets/styles.css';
-
-//do i need to install recoil here? 
- // <Provider store={store}>
- /* // </Provider>, */
-
-render(
-   
-    <div>
-    <App/>
-    </div>,
-   
-=======
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit';
-// import store from './store.js'
-import './stylesheets/styles.css';
 import { render } from 'react-dom';
 import configurationReducer from './features/configuration';
+import '../src/index.css';
+
 const store = configureStore({
     reducer: {
         config: configurationReducer
@@ -34,7 +17,6 @@ render(
     <Provider store={store}>
         <App />
     </Provider>,
->>>>>>> dev
 
     document.getElementById('app')
 )

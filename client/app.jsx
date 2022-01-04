@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { calc } from './features/configuration';
 
+
 function App(){
   const config = useSelector(state => state.config)
   const dispatch = useDispatch();
