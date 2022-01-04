@@ -3,20 +3,22 @@ import { render } from "react-dom";
 import logo from "./azure_Logo.png";
 import "regenerator-runtime/runtime";
 // Get the local DB
+import { useSelector } from "react-redux";
 import azObj from "../AzureRESTAPIEastUSCompute.json";
-const submittedInfo = useSelector((state) => state.userInput);
+
 // Change these three variables to be the user input - then the doesVMmeetMinReq function will need to be updated
 // const memGB = 1;
 // const memGBtimes2 = memGB * 1.25;
 // const vCPUs = 1;
 
-const memGB = submittedInfo.RAM;
-const memGBtimes2 = memGB * 1.25;
-const vCPUs = submittedInfo.vCPU;
-
 // Webpack image loader - https://www.npmjs.com/package/image-webpack-loader // CORS blocker prefix https://cors-anywhere.herokuapp.com/
 
 function AzurePriceComp(props) {
+  const submittedInfo = useSelector((state) => state.userInput);
+  const memGB = submittedInfo.RAM;
+  const memGBtimes2 = memGB * 1.25;
+  const vCPUs = submittedInfo.vCPU;
+  let finalObj = {};
   // Hooks - >>>
   let minPrice = Infinity;
   let minPriceObj;
@@ -69,7 +71,10 @@ function AzurePriceComp(props) {
         azureInfo.retailPrice === ""
       ) {
         // This is the hook that will set the price to the object which contains the lowest price
-        setPrice(priceData.Items[0]);
+        //setPrice(priceData.Items[0]);
+        console.log("The price data object: ");
+        console.log(priceData.Items[0]);
+        finalObj = priceData.Items[0];
       }
     }
   }
@@ -79,23 +84,7 @@ function AzurePriceComp(props) {
     //setInfo(false);
   }
   // listOfmatched.map(item => azureJSON);
-  return (
-    <div className="azureBox">
-      <img className="logo" src={logo} alt="Logo" />
-      <div className="displayTab">
-        <ul className="listGoods">
-          <li className="jsonitems">Service: {azureInfo.serviceName}</li>
-          <br />
-          <li className="jsonitems">
-            Unit Price: ${azureInfo.retailPrice} per Hour
-          </li>
-          <br />
-          <li className="jsonitems">Location: {azureInfo.location}</li>
-          <br />
-        </ul>
-      </div>
-    </div>
-  );
+  return finalObj;
 }
 
 export default AzurePriceComp;
