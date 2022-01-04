@@ -3,10 +3,10 @@ import React from 'react';
 import App from './app.jsx';
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit';
-// import store from './store.js'
-import './stylesheets/styles.css';
 import { render } from 'react-dom';
 import configurationReducer from './features/configuration';
+import '../src/index.css';
+
 const store = configureStore({
     reducer: {
         config: configurationReducer
