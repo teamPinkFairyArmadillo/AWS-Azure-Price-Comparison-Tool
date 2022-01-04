@@ -18,7 +18,7 @@ function Form (){
     
     function handleSubmit(e){
         e.preventDefault();
-        console.log(region, OS, vCPU, RAM, numberOfVMs, hoursPerMonth, diskSize)
+        console.log(region, OS, vCPU, )
 
         //invoke calculation functions from awscalcs.js and azurecalcs.js
 
@@ -66,7 +66,11 @@ function Form (){
                   </div>
                   <div className="w-full lg:w-6/12 px-4">
                     <div className="relative w-full mb-3">
+<<<<<<< HEAD
                       <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
+=======
+                      <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlfor="grid-password">
+>>>>>>> f515cb79710192956d96c94471ea7e4751001c8e
                         Operating System
                       </label>
                       <select className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" value = {OS} onChange={(e) => setOS(e.target.value)}>
@@ -78,7 +82,11 @@ function Form (){
                   </div>
                   <div className="w-full lg:w-6/12 px-4">
                     <div className="relative w-full mb-3">
+<<<<<<< HEAD
                       <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2">
+=======
+                      <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlfor="grid-password">
+>>>>>>> f515cb79710192956d96c94471ea7e4751001c8e
                         vCPU
                       </label>
                       <input type="number" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Enter # of vCPU" id="vCPU" onChange={(e) => setvCPU(e.target.value)}></input>
@@ -86,7 +94,11 @@ function Form (){
                   </div>
                   <div className="w-full lg:w-6/12 px-4">
                     <div className="relative w-full mb-3">
+<<<<<<< HEAD
                       <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
+=======
+                      <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlfor="grid-password">
+>>>>>>> f515cb79710192956d96c94471ea7e4751001c8e
                         RAM
                       </label>
                       <input type="number" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Enter # of RAM" id="RAM" onChange={(e) => setRAM(e.target.value)}></input>
@@ -94,7 +106,11 @@ function Form (){
                   </div>
                   <div className="w-full lg:w-6/12 px-4">
                     <div className="relative w-full mb-3">
+<<<<<<< HEAD
                       <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2">
+=======
+                      <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlfor="grid-password">
+>>>>>>> f515cb79710192956d96c94471ea7e4751001c8e
                         Number of VMs
                       </label>
                       <input type="number" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Enter # of VMs" id="numberOfVMs" onChange={(e) => setNumberOfVMs(e.target.value)}></input>
@@ -102,7 +118,11 @@ function Form (){
                   </div>
                   <div className="w-full lg:w-6/12 px-4">
                     <div className="relative w-full mb-3">
+<<<<<<< HEAD
                       <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
+=======
+                      <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlfor="grid-password">
+>>>>>>> f515cb79710192956d96c94471ea7e4751001c8e
                         Hours Per Month
                       </label>
                       <input type="number" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Enter hours per month"  id="hoursPerMonth" onChange={(e) => setHoursPerMonth(e.target.value)}></input>
@@ -110,7 +130,11 @@ function Form (){
                   </div>
                   <div className="w-full lg:w-6/12 px-4">
                     <div className="relative w-full mb-3">
+<<<<<<< HEAD
                       <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
+=======
+                      <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlfor="grid-password">
+>>>>>>> f515cb79710192956d96c94471ea7e4751001c8e
                         Disk Size
                       </label>
                       <input type="number" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Enter disk size"  id="diskSize" onChange={(e) => setDiskSize(e.target.value)}></input>
