@@ -5,7 +5,12 @@ function Dashboard() {
   //this page would only render if redux dispatch AND api call successful
 
   //access state by using useSelector, need to take a look at what API call returns to check where calculations are being done
-  //card component might require using an UI component library
+  const state = useSelector((state) => state);
+  // const userConfig = state.config.userInput;
+  // const awsResults = state.config.awsResults
+  // const azureResults = state.config.azureResults;
+
+  const awsResultsState = useSelector((state) => state.awsResults);
   return (
     <section>
       <link
@@ -29,7 +34,13 @@ function Dashboard() {
               <div className="welcomecopy flex items-center space-x-4 mr-10">
                 <h1 className="text-black text-4xl font-bold">
                   Lowest quote for services:
-                  <br />$<span className="font-mono text-blue-700">5.95 </span>
+                  <br />$
+                  <span className="font-mono text-blue-700">
+                    {state.config.awsResults.totalCost >
+                    state.config.azureResults.totalCost
+                      ? state.config.azureResults.totalCost
+                      : state.config.awsResults.totalCost}{" "}
+                  </span>
                 </h1>
               </div>
               <div className=" menu flex justify-end  items-center  flex-1 space-x-4">
@@ -49,8 +60,13 @@ function Dashboard() {
                     src="https://www.danslenuage.quebec/wp-content/uploads/sites/100/2020/01/aws.png"
                     className="logo-area h-4"
                   ></img>
-                  <h3 className="py-2 text-4xl font-bold font-mono">$5.95</h3>
-                  <p className="text-xs">example text</p>
+                  <h3 className="py-2 text-4xl font-bold font-mono">
+                    {"$" +
+                      parseFloat(state.config.awsResults.totalCost).toFixed(2)}
+                  </h3>
+                  <p className="text-xs">
+                    {state.config.awsResults.instanceType}
+                  </p>
                   <div className="text-center mt-2 leading-none flex justify-between w-full">
                     <span className=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
                       AWS
@@ -67,8 +83,14 @@ function Dashboard() {
                     src="https://logos-world.net/wp-content/uploads/2021/05/Azure-Logo-700x394.png"
                     className="logo-area h-4"
                   ></img>
-                  <h3 className="py-2 text-4xl font-bold font-mono">$6.10</h3>
-                  <p className="text-xs">example text</p>
+                  <h3 className="py-2 text-4xl font-bold font-mono">
+                    {"$" +
+                      Math.round(state.config.azureResults.totalCost * 100) /
+                        100}
+                  </h3>
+                  <p className="text-xs">
+                    {state.config.azureResults.instanceType}
+                  </p>
                   <div className="text-center mt-2 leading-none flex justify-between w-full">
                     <span className=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
                       Azure
